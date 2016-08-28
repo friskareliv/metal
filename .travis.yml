@@ -22,7 +22,6 @@ addons:
           - cmake
           - cmake-data
         sources: &base_sources
-          - george-edison55-precise-backports
           - ubuntu-toolchain-r-test
           - llvm-toolchain-precise
           - llvm-toolchain-precise-3.5
@@ -30,6 +29,7 @@ addons:
           - llvm-toolchain-precise-3.7
           - llvm-toolchain-precise-3.8
           - llvm-toolchain-precise-3.9
+          - george-edison55-precise-backports
 
 matrix:
     allow_failures:
@@ -86,6 +86,15 @@ matrix:
                 packages:
                   - *base_packages
                   - clang-3.9
+                sources: *base_sources
+
+      - compiler: clang++
+        env: CXX_VERSION=4.0
+        addons:
+            apt:
+                packages:
+                  - *base_packages
+                  - clang-4.0
                 sources: *base_sources
 
       - compiler: g++
