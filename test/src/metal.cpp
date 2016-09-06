@@ -27,7 +27,7 @@
     CHECK((metal::insert<LIST(M), NUMBER(0), VALUE(N)>), (metal::prepend<LIST(M), VALUE(N)>)); \
     CHECK((metal::erase<LIST(INF), NUMBER(M), NUMBER(INF)>), (metal::take<LIST(INF), NUMBER(M)>)); \
     CHECK((metal::erase<LIST(INF), NUMBER(0), NUMBER(M)>), (metal::drop<LIST(INF), NUMBER(M)>)); \
-    CHECK((metal::slice<LIST(M), NUMBER(0), metal::size<LIST(M)>>), (LIST(M))); \
+    CHECK((metal::slice<LIST(M), metal::reverse<metal::indices<LIST(M)>>>), (metal::reverse<LIST(M)>)); \
     CHECK((metal::take<LIST(INF), NUMBER(M)>), (metal::reverse<metal::drop<metal::reverse<LIST(INF)>, NUMBER(CMPL(M))>>)); \
     CHECK((metal::rotate<LIST(INF), NUMBER(M)>), (metal::join<metal::drop<LIST(INF), NUMBER(M)>, metal::take<LIST(INF), NUMBER(M)>>)); \
     CHECK((metal::sort<metal::list<NUMBERS(M)>, metal::lambda<metal::greater>>), (metal::reverse<metal::list<NUMBERS(M)>>)); \

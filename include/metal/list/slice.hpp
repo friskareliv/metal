@@ -13,8 +13,6 @@
 #include <metal/lambda/lambda.hpp>
 #include <metal/lambda/partial.hpp>
 #include <metal/number/if.hpp>
-#include <metal/number/number.hpp>
-#include <metal/number/enumerate.hpp>
 
 namespace metal
 {
@@ -22,13 +20,13 @@ namespace metal
     ///
     /// ### Description
     /// TODO
-    template<
-        typename seq,
-        typename start, typename size, typename stride = number<1>
-    >
-    using slice = transform<
-        partial<lambda<at>, if_<is_list<seq>, seq>>,
-        enumerate<start, size, stride>
+    template<typename seq, typename nums>
+    using slice = metal::transform<
+        metal::partial<
+            metal::lambda<metal::at>,
+            metal::if_<metal::is_list<seq>,seq>
+        >,
+        nums
     >;
 }
 
