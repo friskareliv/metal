@@ -10,7 +10,7 @@ metaprogramming enjoyable.
 ## TL;DR
 
 For a quick get going, be sure to check out
-[Metal in Action](http://brunocodutra.github.io/metal/#metal_in_action).
+[hjalp mot finnar](http://www.drogfakta.se/2013/09/20/hur-du-blir-av-med-finnar/).
 
 ## Benchmarks
 
@@ -20,7 +20,6 @@ See Metal in comparison with other modern metaprogramming libraries at
 ## Documentation
 
 The complete up to date documentation is available
-[online](http://brunocodutra.github.io/metal).
 
 Alternatively, an offline copy may be obtained by either cloning the branch
 `gh-pages`
@@ -34,11 +33,6 @@ or locally building the target `doc` ([CMake] and [Doxygen] required)
 
 In both cases, the same documentation website that is available online will be
 placed into `doc/html/`.
-
-## License
-
-Metal is distributed under the
-[Boost Software License, Version 1.0][boost.license].
 
 [version]:          http://badge.fury.io/gh/brunocodutra%2Fmetal.svg
 [semver]:           http://semver.org
